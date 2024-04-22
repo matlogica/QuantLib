@@ -24,6 +24,8 @@
 #define quantlib_fdm_solver_desc_hpp
 
 #include <ql/methods/finitedifferences/utilities/fdmboundaryconditionset.hpp>
+#include <ql/methods/finitedifferences/stepconditions/fdmstepconditioncomposite.hpp>
+#include <ql/methods/finitedifferences/utilities/fdminnervaluecalculator.hpp>
 
 namespace QuantLib {
 

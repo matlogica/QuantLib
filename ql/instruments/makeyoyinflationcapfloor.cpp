@@ -97,6 +97,11 @@ namespace QuantLib {
         return *this;
     }
 
+    MakeYoYInflationCapFloor& MakeYoYInflationCapFloor::withFirstCapletExcluded() {
+        firstCapletExcluded_ = true;
+        return *this;
+    }
+
     MakeYoYInflationCapFloor&
     MakeYoYInflationCapFloor::withPaymentAdjustment(BusinessDayConvention bdc) {
         roll_ = bdc;

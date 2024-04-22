@@ -39,8 +39,9 @@ namespace QuantLib {
       public:
         VolatilityCube(std::vector<Handle<InterestRateVolSurface> >,
                        std::vector<Handle<AbcdAtmVolCurve> >);
-        const Period& minIndexTenor() const;
-        const Period& maxIndexTenor() const;
+        // following 2 methods NOT implemented
+        //const Period& minIndexTenor() const;
+        //const Period& maxIndexTenor() const;
         const std::vector<Handle<InterestRateVolSurface> >& surfaces() const;
         const std::vector<Handle<AbcdAtmVolCurve> >& curves() const;
       protected:

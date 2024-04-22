@@ -26,7 +26,7 @@
 #define quantlib_fdm_backward_solver_hpp
 
 #include <ql/methods/finitedifferences/utilities/fdmboundaryconditionset.hpp>
-
+#include <ql/methods/finitedifferences/stepconditions/fdmstepconditioncomposite.hpp>
 namespace QuantLib {
 
     class FdmLinearOpComposite;

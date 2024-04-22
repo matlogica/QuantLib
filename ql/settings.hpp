@@ -71,6 +71,9 @@ namespace QuantLib {
         DateProxy& evaluationDate();
         const DateProxy& evaluationDate() const;
 
+        Date pyEvaluationDate() const { return evaluationDate(); }
+        void pyEvaluationDate(const Date& d) { evaluationDate() = d; }
+
         /*! Call this to prevent the evaluation date to change at
             midnight (and, incidentally, to gain quite a bit of
             performance.)  If no evaluation date was previously set,

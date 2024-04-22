@@ -154,9 +154,9 @@ class Gaussian1dModel : public TermStructureConsistentModel, public LazyObject {
     // one later on.
 
     struct CachedSwapKey {
-        const ext::shared_ptr<SwapIndex> index;
-        const Date fixing;
-        const Period tenor;
+        ext::shared_ptr<SwapIndex> index;
+        Date fixing;
+        Period tenor;
         bool operator==(const CachedSwapKey &o) const {
             return index->name() == o.index->name() && fixing == o.fixing &&
                    tenor == o.tenor;

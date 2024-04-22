@@ -79,6 +79,7 @@ namespace QuantLib {
 
         All SimpleQuotes are tweaked together in a parallel fashion.
     */
+    /* NOT IMPLEMENTED 
     std::pair<Real, Real>
     parallelAnalysis(const std::vector<std::vector<Handle<SimpleQuote> > >&,
                      const std::vector<ext::shared_ptr<Instrument> >&,
@@ -86,6 +87,7 @@ namespace QuantLib {
                      Real shift = 0.0001,
                      SensitivityAnalysis type = Centered,
                      Real referenceNpv = Null<Real>());
+    */
 
     //! (bucket) PV01 sensitivity analysis for a (single) SimpleQuote
     /*! returns a pair of first and second derivative values calculated as

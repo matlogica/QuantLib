@@ -35,7 +35,7 @@ namespace QuantLib {
     //! commodity index helper
     class CommodityPricingHelper {
       public:
-        CommodityPricingHelper();
+        CommodityPricingHelper() {} // missing implementation
 
         static Real calculateFxConversionFactor(const Currency& fromCurrency,
                                                 const Currency& toCurrency,

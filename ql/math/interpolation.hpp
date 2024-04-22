@@ -53,7 +53,7 @@ namespace QuantLib {
                  on the latter when the data change.
     */
     class Interpolation : public Extrapolator {
-      protected:
+      public:
         //! abstract base class for interpolation implementations
         class Impl {
           public:

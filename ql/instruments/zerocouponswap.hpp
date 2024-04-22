@@ -79,6 +79,13 @@ namespace QuantLib {
                        const Calendar& paymentCalendar,
                        BusinessDayConvention paymentConvention = Following,
                        Natural paymentDelay = 0);
+        // Following constructor not implemented
+//        ZeroCouponSwap(Type type,
+//                       Real baseNominal,
+//                       const Date& startDate,
+//                       const Date& maturityDate,
+//                       Real fixedPayment
+//          );
 
         ZeroCouponSwap(Type type,
                        Real baseNominal,

@@ -28,6 +28,7 @@
 #include <ql/utilities/null.hpp>
 #include <ql/patterns/curiouslyrecurring.hpp>
 #include <ql/errors.hpp>
+#include <ql/functional.hpp>
 #include <algorithm>
 #include <iomanip>
 
@@ -63,6 +64,16 @@ namespace QuantLib {
           accuracy is specified for \f$ x \f$ or \f$ f(x) \f$.
         - add target value (now the target value is 0.0)
     */
+
+
+class UnaryFunction {
+  public:
+      virtual Real operator()(Real x) const = 0;
+      virtual Real derivative(Real x) const = 0;
+    virtual ~UnaryFunction() {}
+};
+
+
     template <class Impl>
     class Solver1D : public CuriouslyRecurringTemplate<Impl> {
       public:
@@ -220,6 +231,16 @@ namespace QuantLib {
         void setLowerBound(Real lowerBound);
         //! sets the upper bound for the function domain
         void setUpperBound(Real upperBound);
+
+        Real solve2(const UnaryFunction& f, Real xAccuracy,
+                   Real guess, Real step) {
+            return solve(f, xAccuracy, guess, step);
+        }
+        Real solve2(const UnaryFunction& f, Real xAccuracy,
+                   Real guess, Real xMin, Real xMax) {
+            return solve(f, xAccuracy, guess, xMin, xMax);
+        }
+
         //@}
       protected:
         mutable Real root_, xMin_, xMax_, fxMin_, fxMax_;

@@ -30,7 +30,7 @@
 #include <ql/time/frequency.hpp>
 #include <ql/time/timeunit.hpp>
 #include <ql/types.hpp>
-
+#include <strstream>
 
 namespace QuantLib {
 
@@ -46,6 +46,7 @@ namespace QuantLib {
         Period() = default;
         Period(Integer n, TimeUnit units)
         : length_(n), units_(units) {}
+
         explicit Period(Frequency f);
         Integer length() const { return length_; }
         TimeUnit units() const { return units_; }

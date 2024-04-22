@@ -27,7 +27,7 @@
 #include <ql/time/daycounter.hpp>
 #include <ql/methods/finitedifferences/stepcondition.hpp>
 #include <ql/methods/finitedifferences/meshers/fdmmesher.hpp>
-
+#include <ql/methods/finitedifferences/utilities/fdminnervaluecalculator.hpp>
 namespace QuantLib {
 
     class FdmInnerValueCalculator;

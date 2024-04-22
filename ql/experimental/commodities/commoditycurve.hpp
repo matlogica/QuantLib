@@ -110,6 +110,20 @@ namespace QuantLib {
     inline bool operator==(const CommodityCurve& c1, const CommodityCurve& c2) {
         return c1.name() == c2.name();
     }
+    // Missing definitions
+//        const CommodityType& commodityType() const;
+    inline const CommodityType& CommodityCurve::commodityType() const {
+        return commodityType_;
+    }
+//        const UnitOfMeasure& unitOfMeasure() const;
+    inline const UnitOfMeasure& CommodityCurve::unitOfMeasure() const {
+        return unitOfMeasure_;
+    }
+//        const Currency& currency() const;
+    inline const Currency& CommodityCurve::currency() const {
+        return currency_;
+    }
+
 
     inline const std::string& CommodityCurve::name() const {
         return name_;

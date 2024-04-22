@@ -245,7 +245,7 @@ namespace QuantLib {
         /*! Full loss distribution
         */
         std::map<Real, Probability> lossDistribution(const Date&) const;
-        Real densityTrancheLoss(const Date& d, Real lossFraction) const;
+        // Real densityTrancheLoss(const Date& d, Real lossFraction) const; // missing definition
         Real defaultCorrelation(const Date& d, Size iName, Size jName) const;
         /*! Probability vector that each of the remaining live names (at eval
           date) is the n-th default by date d.

@@ -86,7 +86,8 @@ namespace QuantLib {
         };
 
         Real HKPrice(Basket& basket,ext::shared_ptr<Exercise>& exercise)  const;
-        Real LGMPrice(Basket& basket,ext::shared_ptr<Exercise>& exercise) const;
+        // following is not implemented
+        // Real LGMPrice(Basket& basket,ext::shared_ptr<Exercise>& exercise) const;
 
     private:
         Handle<YieldTermStructure>          termStructure_;

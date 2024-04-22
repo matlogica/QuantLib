@@ -43,6 +43,7 @@ namespace QuantLib {
             const ext::optional<bool>& includeSettlementDateFlows = ext::nullopt,
             Date settlementDate = Date(),
             Date npvDate = Date());
+
         void calculate() const override;
         Handle<YieldTermStructure> discountCurve() const {
             return discountCurve_;

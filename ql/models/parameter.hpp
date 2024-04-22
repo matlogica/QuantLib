@@ -36,7 +36,7 @@ namespace QuantLib {
 
     //! Base class for model arguments
     class Parameter {
-      protected:
+      public:
         //! Base class for model parameter implementation
         class Impl {
           public:

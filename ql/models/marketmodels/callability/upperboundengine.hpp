@@ -26,6 +26,7 @@
 #include <ql/methods/montecarlo/exercisestrategy.hpp>
 #include <ql/math/statistics/sequencestatistics.hpp>
 #include <ql/utilities/clone.hpp>
+#include <ql/models/marketmodels/discounter.hpp>
 #include <utility>
 #include <valarray>
 

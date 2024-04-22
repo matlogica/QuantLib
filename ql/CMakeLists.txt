@@ -2355,6 +2355,7 @@ add_custom_command(OUTPUT ${QL_GENERATED_HEADERS}
     WORKING_DIRECTORY ${PROJECT_BINARY_DIR})
 
 add_library(ql_library
+    STATIC
     ${QL_SOURCES}
     ${QL_HEADERS}
     ${QL_CONFIGURED_HEADERS}

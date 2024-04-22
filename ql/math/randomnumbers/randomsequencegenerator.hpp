@@ -74,7 +74,7 @@ namespace QuantLib {
             }
             return sequence_;
         }
-        std::vector<BigNatural> nextInt32Sequence() const {
+        std::vector<std::uint32_t> nextInt32Sequence() const {
             for (Size i=0; i<dimensionality_; i++) {
                 int32Sequence_[i] = rng_.nextInt32();
             }
@@ -88,7 +88,7 @@ namespace QuantLib {
         Size dimensionality_;
         RNG rng_;
         mutable sample_type sequence_;
-        mutable std::vector<BigNatural> int32Sequence_;
+        mutable std::vector<std::uint32_t> int32Sequence_;
     };
 
 }

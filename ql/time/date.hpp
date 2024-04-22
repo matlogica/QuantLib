@@ -125,7 +125,7 @@ namespace QuantLib {
     class Date {
       public:
         //! serial number type
-        typedef std::int_fast32_t serial_type;
+        typedef std::int64_t serial_type;
         //! \name constructors
         //@{
         //! Default constructor returning a null date.
@@ -134,6 +134,7 @@ namespace QuantLib {
         explicit Date(Date::serial_type serialNumber);
         //! More traditional constructor.
         Date(Day d, Month m, Year y);
+        Date(Day d, int m, Year y) : Date(d, Month(m), y) {}
 
 #ifdef QL_HIGH_RESOLUTION_DATE
         //! Constructor taking boost posix date time object
@@ -195,6 +196,16 @@ namespace QuantLib {
         Date operator-(Date::serial_type days) const;
         //! returns a new date decremented by the given period
         Date operator-(const Period&) const;
+
+        bool operator==(const Date& d2) {
+            return (serialNumber() == d2.serialNumber());
+        }
+
+        bool operator<(const Date& d2) {
+            return (serialNumber() < d2.serialNumber());
+        }
+
+
         //@}
 
         //! \name static methods

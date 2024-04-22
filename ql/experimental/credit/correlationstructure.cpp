@@ -28,6 +28,18 @@ namespace QuantLib {
     : TermStructure(dc), bdc_(bdc){
         calendar_ = cal;
     }
+//        CorrelationTermStructure(const Date& referenceDate,
+//                                 const Calendar& cal,
+//                                 BusinessDayConvention bdc,
+//                                 const DayCounter& dc = DayCounter());
+    CorrelationTermStructure::CorrelationTermStructure(
+        const Date& referenceDate,
+        const Calendar& cal,
+        BusinessDayConvention bdc,
+        const DayCounter& dc)
+    : TermStructure(referenceDate, cal, dc), bdc_(bdc){
+        calendar_ = cal;
+    }
 
     CorrelationTermStructure::CorrelationTermStructure(
         Natural settlementDays,

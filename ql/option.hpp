@@ -25,6 +25,7 @@
 #define quantlib_option_hpp
 
 #include <ql/instrument.hpp>
+#include <ql/exercise.hpp>
 #include <utility>
 
 namespace QuantLib {

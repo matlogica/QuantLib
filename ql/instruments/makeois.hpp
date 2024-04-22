@@ -90,6 +90,11 @@ namespace QuantLib {
 
         MakeOIS& withPricingEngine(
                               const ext::shared_ptr<PricingEngine>& engine);
+
+        ext::shared_ptr<OvernightIndexedSwap> makeOIS(){
+            return (ext::shared_ptr<OvernightIndexedSwap>)(* this);
+        }
+
       private:
         Period swapTenor_;
         ext::shared_ptr<OvernightIndex> overnightIndex_;

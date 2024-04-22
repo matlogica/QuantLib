@@ -26,6 +26,7 @@
 
 #include <ql/methods/montecarlo/sample.hpp>
 #include <vector>
+#include <cstdint>
 
 namespace QuantLib {
 
@@ -56,7 +57,7 @@ namespace QuantLib {
         Size dimensionality_;
         mutable unsigned long sequenceCounter_ = 0;
         mutable sample_type sequence_;
-        std::vector<unsigned long> randomStart_;
+        std::vector<std::uint32_t> randomStart_;
         std::vector<Real>  randomShift_;
     };
 }

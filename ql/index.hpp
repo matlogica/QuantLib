@@ -127,6 +127,19 @@ namespace QuantLib {
                                                << " while " << h[duplicatedDate]
                                                << " value is already present");
         }
+//    %extend {
+        void addFixings(const std::vector<Date>& fixingDates,
+                        const std::vector<Rate>& fixings,
+                        bool forceOverwrite = false) {
+            addFixings(fixingDates.begin(),fixingDates.end(),
+                             fixings.begin(),
+                             forceOverwrite);
+        }
+        std::string __str__() {
+            return name()+" index";
+        }
+//    }
+
         //! clears all stored historical fixings
         void clearFixings();
 

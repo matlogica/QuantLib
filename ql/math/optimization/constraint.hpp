@@ -33,7 +33,7 @@ namespace QuantLib {
 
     //! Base constraint class
     class Constraint {
-      protected:
+      public:
         //! Base class for constraint implementations
         class Impl {
           public:

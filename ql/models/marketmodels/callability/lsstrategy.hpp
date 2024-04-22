@@ -24,7 +24,7 @@
 #include <ql/models/marketmodels/callability/marketmodelbasissystem.hpp>
 #include <ql/models/marketmodels/callability/exercisevalue.hpp>
 #include <ql/utilities/clone.hpp>
-
+#include <ql/models/marketmodels/discounter.hpp>
 namespace QuantLib {
 
     class MarketModelDiscounter;
